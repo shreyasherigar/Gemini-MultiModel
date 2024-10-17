@@ -6,7 +6,7 @@ import google.generativeai as genai
 import io
 from PIL import Image
 
-genai.configure(api_key="AIzaSyAhKRHjuc5_L9i3TowkZxlemd_UUogSEhg")
+genai.configure(api_key="API_KEY")
 
 class TextInputHandler:
     def __init__(self,opt):
