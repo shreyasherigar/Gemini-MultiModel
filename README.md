@@ -4,9 +4,9 @@ This project is a Streamlit application that utilizes Google's Gemini generative
 
 ## Features
 
+Choose between different Gemini models (e.g., `gemini-pro` and `gemini-1.5-flash`).
 - **Text Input**: Users can input text to generate responses from the Gemini model.
 - **Image Upload**: Users can upload images, and the model will describe the image based on the provided prompt.
-- **Multi-Model Support**: Choose between different Gemini models (e.g., `gemini-pro` and `gemini-1.5-flash`).
 
 ## Installation
 
