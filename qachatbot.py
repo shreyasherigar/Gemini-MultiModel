@@ -1,12 +1,16 @@
 import streamlit as st
 import google.generativeai as genai
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+api_key = os.getenv("api_key")
 
 
 import io
 from PIL import Image
 
-genai.configure(api_key="API_KEY")
+genai.configure(api_key=api_key)
 
 class TextInputHandler:
     def __init__(self,opt):
@@ -44,11 +48,11 @@ class TextToImageHandler:
         return result
 
 
-st.set_page_config(page_title="Gemini practice")  #Setting title of
-selected_opt = st.selectbox("Select", options=["gemini-pro", "gemini-1.5-flash"])
+st.set_page_config(page_title="Gemini practice")  
+selected_opt = st.selectbox("Select", options=["gemini-2.0-flash", "gemini-1.5-flash"])
 st.header("Ask question")
 
-if selected_opt == "gemini-pro":
+if selected_opt == "gemini-2.0-flash":
     input_text = st.text_input("Input:", key="input")
     input_image = None
     text_input_handler= TextInputHandler(selected_opt)
